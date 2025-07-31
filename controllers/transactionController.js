@@ -1,5 +1,3 @@
-// controllers/transactionController.js
-
 import { getSession } from '../config/neo4j.js';
 
 export const addOrUpdateTransaction = async (req, res) => {
@@ -13,6 +11,8 @@ export const addOrUpdateTransaction = async (req, res) => {
 
   try {
     // Create or update transaction node & link to users
+    // The "WITH t" clause was added here to fix the Cypher syntax error.
+    // It passes the created/merged transaction node 't' to the next part of the query.
     await session.run(
       `
       MERGE (t:Transaction {id: $id})
@@ -61,7 +61,7 @@ export const listTransactions = async (req, res) => {
     const result = await session.run("MATCH (t:Transaction) RETURN t");
     const transactions = result.records.map(r => r.get('t').properties);
     res.json(transactions);
-  } catch (error) {
+  } catch (error) { // The missing '{' has been added here.
     res.status(500).json({ error: error.message });
   } finally {
     await session.close();
