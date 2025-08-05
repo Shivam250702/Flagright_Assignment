@@ -1,4 +1,3 @@
-// config/neo4j.js
 import neo4j from "neo4j-driver";
 import dotenv from "dotenv";
 dotenv.config();

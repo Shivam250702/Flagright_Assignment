@@ -1,4 +1,3 @@
-// controllers/relationshipController.js
 
 import { getSession } from '../config/neo4j.js';
 

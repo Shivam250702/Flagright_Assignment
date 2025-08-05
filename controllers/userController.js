@@ -1,4 +1,3 @@
-// controllers/userController.js
 
 import { getSession } from '../config/neo4j.js';
 import { linkUsersBySharedAttributes } from '../models/utils.js';

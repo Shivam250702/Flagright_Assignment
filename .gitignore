@@ -3,4 +3,4 @@ node_modules/
 
 
 
-docker run --name my-neo4j-db -p 7474:7474 -p 7687:7687 -d -e NEO4J_AUTH=neo4j/your_strong_password neo4j:latest
+docker run --name my-neo4j-db -p 7474:7474 -p 7687:7687 -d -e NEO4J_AUTH=neo4j/gameofthrones neo4j:latest

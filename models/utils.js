@@ -1,5 +1,3 @@
-// models/utils.js
-
 /**
  * Link User nodes sharing the same attributes (email, phone, address, payment)
  * Creates SHARED_EMAIL, SHARED_PHONE, SHARED_ADDRESS, SHARED_PAYMENT relationships.

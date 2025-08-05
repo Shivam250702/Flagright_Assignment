@@ -61,7 +61,7 @@ export const listTransactions = async (req, res) => {
     const result = await session.run("MATCH (t:Transaction) RETURN t");
     const transactions = result.records.map(r => r.get('t').properties);
     res.json(transactions);
-  } catch (error) { // The missing '{' has been added here.
+  } catch (error) { 
     res.status(500).json({ error: error.message });
   } finally {
     await session.close();

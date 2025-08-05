@@ -6,14 +6,9 @@ import fetch from 'node-fetch';
 import neo4j from 'neo4j-driver';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
 dotenv.config();
 
 const API_BASE_URL = `http://localhost:${process.env.PORT || 8000}/api`;
-
-// --- Sample Data ---
-// Designed to meet the requirements: 5-10 users, 10-15 transactions,
-// shared attributes, and transaction-to-transaction links.
 
 const sampleUsers = [
   { id: 'user1', name: 'Alice', email: 'alice@example.com', phone: '123-456-7890', address: '123 Maple St', payment: 'cc_1' },
