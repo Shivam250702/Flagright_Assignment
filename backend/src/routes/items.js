@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.itemsRouter = void 0;
+var express_1 = require("express");
+var auth_js_1 = require("../middleware/auth.js");
+var itemController_js_1 = require("../controllers/itemController.js");
+exports.itemsRouter = (0, express_1.Router)();
+exports.itemsRouter.get("/", auth_js_1.requireAuth, itemController_js_1.listItems);
+exports.itemsRouter.post("/", auth_js_1.requireAuth, itemController_js_1.createItem);
+exports.itemsRouter.put("/:id", auth_js_1.requireAuth, itemController_js_1.updateItem);
+exports.itemsRouter.delete("/:id", auth_js_1.requireAuth, itemController_js_1.deleteItem);

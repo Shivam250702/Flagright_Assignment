@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.apiRouter = void 0;
+var express_1 = require("express");
+var auth_js_1 = require("./auth.js");
+var users_js_1 = require("./users.js");
+var items_js_1 = require("./items.js");
+exports.apiRouter = (0, express_1.Router)();
+exports.apiRouter.use("/auth", auth_js_1.authRouter);
+exports.apiRouter.use("/users", users_js_1.usersRouter);
+exports.apiRouter.use("/items", items_js_1.itemsRouter);

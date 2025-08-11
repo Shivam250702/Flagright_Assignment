@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.app = void 0;
+var express_1 = require("express");
+var cookie_parser_1 = require("cookie-parser");
+var morgan_1 = require("morgan");
+var security_js_1 = require("./middleware/security.js");
+var index_js_1 = require("./routes/index.js");
+exports.app = (0, express_1.default)();
+exports.app.use(security_js_1.securityMiddleware.helmet);
+exports.app.use(security_js_1.securityMiddleware.cors);
+exports.app.use(security_js_1.securityMiddleware.rateLimiter);
+exports.app.use((0, morgan_1.default)("combined"));
+exports.app.use(express_1.default.json());
+exports.app.use((0, cookie_parser_1.default)());
+exports.app.get("/health", function (_req, res) { return res.json({ status: "ok" }); });
+exports.app.use("/api", index_js_1.apiRouter);
