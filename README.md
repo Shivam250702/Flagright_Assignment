@@ -59,8 +59,16 @@ Production-ready full-stack codebase with a React (Vite + TypeScript + Tailwind)
 ### Project layout
 
 ```
+
 backend/   # Express API + Prisma
 frontend/  # React + Vite app
 ```
+### Demo Screenshot 
+<img width="1280" height="576" alt="image" src="https://github.com/user-attachments/assets/5c329bc3-1f67-48dc-9ae9-dc88af01afac" />
+<img width="1280" height="578" alt="image" src="https://github.com/user-attachments/assets/6cc89aa9-b711-46f4-b45b-40452c026d31" />
+<img width="1280" height="580" alt="image" src="https://github.com/user-attachments/assets/e4498e68-bedc-45a5-a3e9-cd52dde88b25" />
+<img width="1280" height="588" alt="image" src="https://github.com/user-attachments/assets/3f4d940a-595e-4457-bc5f-16096ad38e0c" />
+
+
 
 
